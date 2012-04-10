@@ -6,7 +6,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require prettify
+//= require_self
 
 $(document).ready(function(){
 	snipit.defaults();
