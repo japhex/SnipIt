@@ -1,0 +1,7 @@
+<div id="retrieved-data">
+	<p id="notice"><%= notice %></p>
+	<h2><%= @page.name %></h2>
+	<pre class="prettyprint linenums pre-scrollable"><%= @page.content %></pre>
+	<%= link_to 'Edit', edit_page_path(@page) %> |
+	<%= link_to 'Back', pages_path, :class => 'btn-back' %>
+</div>

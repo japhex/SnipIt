@@ -1,0 +1,55 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,time, mark, audio, video {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;list-style-type:none;}body {line-height:1;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block;}nav ul {list-style:none;}blockquote, q {quotes:none;}blockquote:before, blockquote:after,q:before, q:after {content:'';content:none;}a {margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}ins {background-color:#ff9;color:#000;text-decoration:none;}mark {background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}del {text-decoration:line-through;}abbr[title], dfn[title] {border-bottom:1px dotted;cursor:help;}table {border-collapse:collapse;border-spacing:0;}hr {display:block;height:1px;border:0;border-top:1px solid #cccccc;margin:1em 0;padding:0;}input, select {vertical-align:middle;}
+
+/* Global Styles */
+body {font-family:helvetica;font-size:80%;background:url(test-bg.png);}
+#overlay {position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;background:rgba(0,0,0,0.8);display:none;}
+#popup {margin:50px auto 0 auto;z-index:1;background:#fff;width:1000px;padding:20px;}
+#header {position:fixed;top:0;right:0;background:rgba(0,0,0,0.8);padding:15px;color:#fff;width:300px;}
+#header a {color:#cecece;text-decoration:none;}
+#new-snippet {display:block;position:absolute;left:-96px;background:rgba(0,0,0,0.8);padding:15px;top:0;text-transform:uppercase;}
+#new-snippet:hover {background:rgba(0,0,0,0.6);color:#fff;}
+#content {margin:70px 30px;}
+
+/* Index.html.erb viewing users snippets */
+article {position:relative;margin:10px 0;overflow:auto;width:560px;background-color:#fff;border:1px solid rgba(0, 0, 0, 0.3);border-radius:6px;box-shadow:0 3px 7px rgba(0, 0, 0, 0.3);-webkit-background-clip:padding-box;-moz-background-clip:padding-box;background-clip:padding-box;}
+article .container {font-family:'Droid Sans';overflow:hidden;}
+article h2, #content h1 {font-weight:normal;font-family:'Droid Serif';font-size:16px;padding:9px 15px;border-bottom:1px solid #eee;background:#fff;border-top-left-radius:5px;border-top-right-radius:5px;}
+article span {display:block;}
+article .snippet-actions {background:#222;padding:10px;box-shadow:inset 0 0 10px #000;color:#fff;display:none;}
+article .snippet-actions a {color:#fff;text-decoration:none;}
+.project {overflow-y:auto;max-height:400px;padding:15px;}
+.project span:first-child {}
+.project span:last-child {position:absolute;top:0;right:0;text-transform:uppercase;padding:3px 6px;border-radius:3px;background:#b4cdd4;border:1px solid #ADC7DC;display:inline-block;color:#fff;}
+.pages {padding:14px 15px 15px;margin-bottom:0;text-align:right;background-color:whiteSmoke;border-top:1px solid #DDD;border-radius:0 0 6px 6px;box-shadow:inset 0 1px 0 #ffffff;overflow:hidden;}
+.pages h3 {float:left;margin:0 1px 1px 0;background:#666;padding:3px 6px;border-radius:3px;font-weight:normal;}
+.pages h3 a {color:#fff;text-decoration:none;}
+.pages h3 a:hover {}
+.snippet-actions {clear:left;}
+
+/* Pages */
+.pages .code-jsp {background:#8B6204;border:1px solid #775404;}
+.pages .code-js {background:#B27E06;border:1px solid #9E7005;}
+.pages .code-html {background:#EDA807;border:1px solid #DA9A07;}
+.pages .code-css {background:#F9C64D;border:1px solid #F9BF39;}
+
+/* Sign up/Sign in */
+#user_new {width:660px;margin:80px auto 0 auto;}
+#user_new input[type*="email"], #user_new input[type*="password"] {height:40px;padding:20px;width:200px;font-size:1.5em;}
+#user_new input[type*="submit"] {height:40px;}
+
+/* Forms */
+.form-horizontal {background:#fff;padding:15px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;box-shadow:0 3px 7px rgba(0, 0, 0, 0.3);}
+.well {overflow:hidden;position:relative;}
+.well h3 {font-family:'Droid Serif';font-weight:normal;font-size:1.3em;}
+.add-page {text-decoration:none;clear:left;position:absolute;bottom:5px;left:5px;}
+.btn-back {position:fixed;top:0;left:0;display:block;background:rgba(0,0,0,0.8);padding:15px;text-transform:uppercase;color:#fff;text-decoration:none;}
+.page {width:300px;background:papayawhip;float:left;margin:0 10px 10px 0;}
+form .page .controls {margin-left:15px;padding:15px 0;}
+form .page input, form .page textarea {width:260px;}

@@ -1,0 +1,41 @@
+<%= form_for(@snippet, :html => {:class => "form-horizontal"}) do |f| %>
+  <% if @snippet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+
+      <ul>
+      <% @snippet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+		<div class="controls">
+    	<%= f.text_field :name %>
+		</div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+		<div class="controls">
+    	<%= f.text_field :description %>
+		</div>
+  </div>
+  <div class="control-group">
+    <%= f.label :project, :class => 'control-label' %>
+		<div class="controls">
+    	<%= f.text_field :project %>
+		</div>
+  </div>
+	<div class="well">
+	  <%= f.fields_for :pages do |page| %>
+	    <%= render "page_fields", :f => page %>
+	  <% end %>
+		<p><%= link_to_add_fields "Add Page", f, :pages %></p>
+	</div>
+  <div class="actions">
+    <%= f.submit "Submit", :class => 'btn btn-primary' %>
+  </div>
+<% end %>
