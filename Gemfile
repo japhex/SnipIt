@@ -9,7 +9,7 @@ gem 'sqlite3'
 
 gem 'json'
 gem 'devise'
-
+gem 'execjs', :git => 'git://github.com/kennyj/execjs.git', :branch => 'rails_issue_2880'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
