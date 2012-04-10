@@ -11,6 +11,7 @@ html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre
 body {font-family:helvetica;font-size:80%;background:url(test-bg.png);}
 #overlay {position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;background:rgba(0,0,0,0.8);display:none;}
 #popup {margin:50px auto 0 auto;z-index:1;background:#fff;width:1000px;padding:20px;}
+#popup .btn-back {display:none;}
 #header {position:fixed;top:0;right:0;background:rgba(0,0,0,0.8);padding:15px;color:#fff;width:300px;}
 #header a {color:#cecece;text-decoration:none;}
 #new-snippet {display:block;position:absolute;left:-96px;background:rgba(0,0,0,0.8);padding:15px;top:0;text-transform:uppercase;}
@@ -18,7 +19,8 @@ body {font-family:helvetica;font-size:80%;background:url(test-bg.png);}
 #content {margin:70px 30px;}
 
 /* Index.html.erb viewing users snippets */
-article {position:relative;margin:10px 0;overflow:auto;width:560px;background-color:#fff;border:1px solid rgba(0, 0, 0, 0.3);border-radius:6px;box-shadow:0 3px 7px rgba(0, 0, 0, 0.3);-webkit-background-clip:padding-box;-moz-background-clip:padding-box;background-clip:padding-box;}
+#snippets {overflow:hidden;}
+article {float:left;position:relative;margin:10px 10px 10px 0;overflow:auto;width:560px;background-color:#fff;border:1px solid rgba(0, 0, 0, 0.3);border-radius:6px;box-shadow:0 3px 7px rgba(0, 0, 0, 0.3);-webkit-background-clip:padding-box;-moz-background-clip:padding-box;background-clip:padding-box;min-height:210px;}
 article .container {font-family:'Droid Sans';overflow:hidden;}
 article h2, #content h1 {font-weight:normal;font-family:'Droid Serif';font-size:16px;padding:9px 15px;border-bottom:1px solid #eee;background:#fff;border-top-left-radius:5px;border-top-right-radius:5px;}
 article span {display:block;}
