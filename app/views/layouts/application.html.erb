@@ -8,15 +8,26 @@
 </head>
 <body>
 	<header id="header">
-		<%= link_to '+Snippet', new_snippet_path, :id => 'new-snippet' %>
-		<div id="user_nav">
-		  <% if user_signed_in? %>
-		    Signed in as <%= current_user.email %>. Not you?
-		    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-		  <% else %>
-		    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-		  <% end %>
-		</div>
+		<div class="navbar navbar-fixed-top">
+		  <div class="navbar-inner">
+		    <div class="container">
+					<a class="brand btn-danger" href="#">SnipIt</a>
+					<ul class="nav">
+						<li><%= link_to '+Snippet', new_snippet_path, :id => 'new-snippet' %></li>
+					</ul>	
+					<ul class="nav pull-right">
+						<li>
+							<% if user_signed_in? %>
+						    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+						    <p>Signed in as <%= current_user.email %>. Not you?</p>						
+						  <% else %>
+						    <!--<%#= link_to "Sign up", new_user_registration_path %> or <%#= link_to "sign in", new_user_session_path %>-->
+						  <% end %>
+						</li>
+					</ul>
+		    </div>
+		  </div>
+		</div>		
 	</header>
 	<section id="content">
 		<%= yield %>
