@@ -45,9 +45,10 @@ class SnippetsController < ApplicationController
   def create
     @snippet = Snippet.new(params[:snippet])
     @snippet.user = current_user
+
     respond_to do |format|
       if @snippet.save
-        format.html { redirect_to @snippet, :notice => 'Snippet was successfully created.' }
+        format.html { redirect_to snippets_url, :notice => 'Snippet was successfully created.' }
         format.json { render :json => @snippet, :status => :created, :location => @snippet }
       else
         format.html { render :action => "new" }

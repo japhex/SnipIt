@@ -7,6 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require prettify
+//= require masonry
 //= require_self
 
 $(document).ready(function(){
@@ -17,6 +18,9 @@ var snipit = {
 	defaults: function(){
 		snipit.ajaxifyBitch();
 		snipit.colourPagesAnTing();
+		$('#snippets').masonry({
+		  itemSelector: 'article'
+		});
 	},
 	ajaxifyBitch: function(){
 		var trigger = $('.ajaxify-bitch'),
